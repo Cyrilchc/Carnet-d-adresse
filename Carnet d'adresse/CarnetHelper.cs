@@ -67,15 +67,8 @@ namespace Carnet_d_adresse
 
         public void delInCarnet(Personne personne, Carnet carnet)
         {
-            foreach (Personne p in carnet.personnes)
-            {
-                if (p.Equals(personne))
-                {
-                    carnet.personnes.Remove(p);
-                    SaveCarnet(carnet);
-                    break;
-                }
-            }
+            carnet.personnes.Remove(personne);
+            SaveCarnet(carnet);
         }
 
         /// <summary>
